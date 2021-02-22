@@ -16,6 +16,6 @@ for DOTFILE in $DOTFILES
 do
     LINK_PATH="/home/rstudio/$DOTFILE"
     FILE_PATH="$DOTFILES_ROOT/$DOTFILE"
-    mkdir -p $(dirname $LINK_PATH)
-    ln -sfnv "$FILE_PATH" "$LINK_PATH"
+    sudo -u rstudio mkdir -p $(dirname $LINK_PATH)
+    sudo -u rstudio ln -sfnv "$FILE_PATH" "$LINK_PATH"
 done
